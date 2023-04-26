@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Input Form</title>
+  </head>
+  <body>
+    <form>
+      <h2>RSI</h2>
+      <label for="rsi-short-term">短期</label>
+      <input type="text" id="rsi-short-max" name="short-term-rsi-above" placeholder="以上で通知　0~100を入力">
+	  <input type="text" id="rsi-short-min" name="short-term-rsi-below" placeholder="以下で通知　0~100を入力">
+      <br>
+      <label for="rsi-short-period">　　 短期期間設定</label>
+      <input type="text" id="rsi-short-period" name="short-term-rsi-period" placeholder="数字を入力">
+      <select id="rsi-period1" name="rsi-period1">
+        <option value="日">日</option>
+        <option value="週">週</option>
+        <option value="月">月</option>
+      </select>
+      <br>
+      <label for="rsi-long-term">長期</label>
+      <input type="text" id="rsi-long-max" name="long-term-rsi-above" placeholder="以上で通知　0~100を入力">
+	  <input type="text" id="rsi-long-min" name="long-term-rsi-below" placeholder="以下で通知　0~100を入力">
+      <br>
+      <label for="rsi-short-period">　　 長期期間設定</label>
+      <input type="text" id="rsi-longperiod" name="long-term-rsi-period" placeholder="数字を入力">
+      <select id="rsi-period2" name="rsi-period2">
+        <option value="日">日</option>
+        <option value="週">週</option>
+        <option value="月">月</option>
+      </select>
+      <br>
+      <label for="rsi-notification">通知</label>
+      <select id="rsi-notification" name="rsi-notification">
+        <option value="OFF">OFF</option>
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+      </select>
+      <label for="rsi-trigger"> ＋機能</label>
+      <select id="rsi-trigger" name="rsi-trigger">
+        <option value="rsi-trigger-UP">上抜け時</option>
+        <option value="rsi-trigger-dawn">下抜け時</option>
+      </select><br>
+
+      <h2>RCI</h2>
+      <label for="rci-short-term">短期</label>
+      <input type="text" id="rci-short-max" name="short-term-rci-above" placeholder="以上で通知　0~100を入力">
+	  <input type="text" id="rci-short-min" name="short-term-rci-below" placeholder="以下で通知　0~100を入力">
+      <br>
+      <label for="rci-short-period">　　 短期期間設定</label>
+      <input type="text" id="rci-short-period" name="short-term-rci-period" placeholder="数字を入力">
+      <select id="rci-period1" name="rci-period1">
+        <option value="日">日</option>
+        <option value="週">週</option>
+        <option value="月">月</option>
+      </select>
+      <br>
+      <label for="rci-long-term">長期</label>
+      <input type="text" id="rci-long-max" name="long-term-rci-above" placeholder="以上で通知　0~100を入力">
+	  <input type="text" id="rci-long-min" name="long-term-rci-below" placeholder="以下で通知　0~100を入力">
+      <br>
+      <label for="rci-short-period">　　 長期期間設定</label>
+      <input type="text" id="rci-longperiod" name="long-term-rci-period" placeholder="数字を入力">
+      <select id="rci-period2" name="rci-period2">
+        <option value="日">日</option>
+        <option value="週">週</option>
+        <option value="月">月</option>
+      </select>
+      <br>
+      <label for="rci-notification">通知</label>
+      <select id="rci-notification" name="rci-notification">
+        <option value="OFF">OFF</option>
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+      </select>
+      <label for="rci-trigger"> ＋機能</label>
+      <select id="rci-trigger" name="rci-trigger">
+        <option value="rci-trigger-UP">上抜け時</option>
+        <option value="rci-trigger-dawn">下抜け時</option>
+      </select><br>
+
+  <h2>MACD</h2>
+  <label for="MACD-term">短期</label>
+      <input type="text" id="MACD-max" name="term-MACD-above" placeholder="以上で通知　0~100を入力">
+	  <input type="text" id="MACD-min" name="term-MACD-below" placeholder="以下で通知　0~100を入力">
+      <br>
+      <label for="MACD-period">　　 短期期間設定</label>
+      <input type="text" id="MACD-period" name="term-MACD-period" placeholder="数字を入力">
+      <select id="MACD-period1" name="MACD-period1">
+        <option value="日">日</option>
+        <option value="週">週</option>
+        <option value="月">月</option>
+      </select>
+      <br>
+      <label for="MACD-signal-term">長期</label>
+      <input type="text" id="MACD-signal-max" name="MACD-signal-above" placeholder="以上で通知　0~100を入力">
+	  <input type="text" id="MACD-signal-min" name="MACD-signal-below" placeholder="以下で通知　0~100を入力">
+      <br>
+      <label for="rci-short-period">　　 長期期間設定</label>
+      <input type="text" id="MACD-signal-longperiod" name="MACD-signal-period" placeholder="数字を入力">
+      <select id="MACD-signal-period2" name="MACD-signal-period2">
+        <option value="日">日</option>
+        <option value="週">週</option>
+        <option value="月">月</option>
+      </select>
+      <br>
+      <label for="MACD-signal-notification">通知</label>
+      <select id="MACD-signal-notification" name="MACD-signal-notification">
+        <option value="OFF">OFF</option>
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+      </select>
+      <label for="MACD-signal-trigger"> ＋機能</label>
+      <select id="MACD-signal-trigger" name="MACD-signal-trigger">
+        <option value="MACD-signal-trigger-UP">上抜け時</option>
+        <option value="MACD-signal-trigger-dawn">下抜け時</option>
+      </select>
+      <br>
+      <br>
+  <button type="submit">送信</button>
+</form>
+
+  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+
+   <script>
+
+        $(document).ready(function () {
+            const liffId = "1660931434-LZAgvmPJ";
+            initializeLiff(liffId);
+        })
+
+        function initializeLiff(liffId) {
+            liff.init({
+                liffId: liffId
+            }).then(() => {
+                initializeApp();
+            }).catch((err) => {
+                console.log('LIFF Initialization failed ', err);
+            });
+        }
+
+        function sendText(text) {
+            liff.sendMessages([{
+                'type': 'text',
+                'text': text
+            }]).then(function () {
+                liff.closeWindow();
+            }).catch(function (error) {
+                window.alert('Failed to send message ' + error);
+            });
+        }
+
+        const params = (new URL(document.location)).searchParams;
+        const key = params.get('key');
+
+     　　$(function () {
+            $('form').submit(function () {
+                const short-term-rsi-above    = $('input[name="short-term-rsi-above"]').val();
+                const short-term-rsi-below = $('input[name="short-term-rsi-below"]').val();
+                const short-term-rsi-period  = $('input[name="short-term-rsi-period"]').val();
+                const rsi-period1 = $('#name="rsi-period1"').val();
+                const long-term-rsi-above    = $('input[name="long-term-rsi-above"]').val();
+                const long-term-rsi-below = $('input[name="long-term-rsi-below"]').val();
+                const long-term-rsi-period  = $('input[name="long-term-rsi-period"]').val();
+                const rsi-period2 = $('#name="rsi-period2"').val();
+                const rsi-notification = $('#name="rsi-notification"').val();
+                const rsi-trigger = $('#name="rsi-trigger"').val();
+                const msgrsi = `${short-term-rsi-above}\n${short-term-rsi-below}\n${short-term-rsi-period}${rsi-period1}\n${long-term-rsi-above}\n${long-term-rsi-below}\n${long-term-rsi-period}${rsi-period2}\n${rsi-notification}\n${rsi-trigger}`;
+
+                const short-term-rci-above    = $('input[name="short-term-rci-above"]').val();
+                const short-term-rci-below = $('input[name="short-term-rci-below"]').val();
+                const short-term-rci-period  = $('input[name="short-term-rci-period"]').val();
+                const rci-period1 = $('#name="rci-period1"').val();
+                const long-term-rci-above    = $('input[name="long-term-rci-above"]').val();
+                const long-term-rci-below = $('input[name="long-term-rci-below"]').val();
+                const long-term-rci-period  = $('input[name="long-term-rci-period"]').val();
+                const rci-period2 = $('#name="rci-period2"').val();
+                const rci-notification = $('#name="rci-notification"').val();
+                const rci-trigger = $('#name="rci-trigger"').val();
+                const msgrci = `${short-term-rci-above}\n${short-term-rci-below}\n${short-term-rci-period}${rci-period1}\n${long-term-rci-above}\n${long-term-rci-below}\n${long-term-rci-period}${rci-period2}\n${rci-notification}\n${rci-trigger}`;
+
+                const term-MACD-above    = $('input[name="term-MACD-above"]').val();
+                const term-MACD-below = $('input[name="term-MACD-below"]').val();
+                const term-MACD-period  = $('input[name="term-MACD-period"]').val();
+                const MACD-period1 = $('#name="MACD-period1"').val();
+                const MACD-signal-above    = $('input[name="MACD-signal-above"]').val();
+                const MACD-signal-below = $('input[name="MACD-signal-below"]').val();
+                const MACD-signal-period  = $('input[name="MACD-signal-period"]').val();
+                const MACD-signal-period2 = $('#name="MACD-signal-period2"').val();
+                const MACD-signal-notification = $('#name="MACD-signal-notification"').val();
+                const MACD-signal-trigger = $('#name="MACD-signal-trigger"').val();
+                const msgmacd = `${term-MACD-above}\n${term-MACD-below}\n${term-MACD-period}${MACD-period1}\n${MACD-signal-above}\n${MACD-signal-below}\n${MACD-signal-period}${MACD-signal-period2}\n${MACD-signal-notification}\n${MACD-signal-trigger}`;
+
+                sendText(msgrsi);
+                sendText(msgrci);
+                sendText(msgmacd);
+                return false;
+            });
+        });
+
+    </script>
+
+</body>
+</html>
