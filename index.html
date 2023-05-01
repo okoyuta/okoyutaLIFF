@@ -5,14 +5,14 @@
     <title>Input Form</title>
   </head>
   <body>
-    <form>
+    <form action="https://example.com/webhook" method="POST">
       <h2>RSI</h2>
       <label for="rsi-short-term">短期</label>
-      <input type="text" id="rsi-short-max" name="short-term-rsi-above" placeholder="以上で通知　0~100を入力">
-	  <input type="text" id="rsi-short-min" name="short-term-rsi-below" placeholder="以下で通知　0~100を入力">
+      <input type="number" id="rsi-short-max" name="short-term-rsi-above" placeholder="以上で通知　0~100を入力">
+	  <input type="number" id="rsi-short-min" name="short-term-rsi-below" placeholder="以下で通知　0~100を入力">
       <br>
       <label for="rsi-short-period">　　 短期期間設定</label>
-      <input type="text" id="rsi-short-period" name="short-term-rsi-period" placeholder="数字を入力">
+      <input type="number" id="rsi-short-period" name="short-term-rsi-period" placeholder="数字を入力">
       <select id="rsi-period1" name="rsi-period1">
         <option value="日">日</option>
         <option value="週">週</option>
@@ -20,11 +20,11 @@
       </select>
       <br>
       <label for="rsi-long-term">長期</label>
-      <input type="text" id="rsi-long-max" name="long-term-rsi-above" placeholder="以上で通知　0~100を入力">
-	  <input type="text" id="rsi-long-min" name="long-term-rsi-below" placeholder="以下で通知　0~100を入力">
+      <input type="number" id="rsi-long-max" name="long-term-rsi-above" placeholder="以上で通知　0~100を入力">
+	  <input type="number" id="rsi-long-min" name="long-term-rsi-below" placeholder="以下で通知　0~100を入力">
       <br>
       <label for="rsi-short-period">　　 長期期間設定</label>
-      <input type="text" id="rsi-longperiod" name="long-term-rsi-period" placeholder="数字を入力">
+      <input type="number" id="rsi-longperiod" name="long-term-rsi-period" placeholder="数字を入力">
       <select id="rsi-period2" name="rsi-period2">
         <option value="日">日</option>
         <option value="週">週</option>
@@ -45,11 +45,11 @@
 
       <h2>RCI</h2>
       <label for="rci-short-term">短期</label>
-      <input type="text" id="rci-short-max" name="short-term-rci-above" placeholder="以上で通知　0~100を入力">
-	  <input type="text" id="rci-short-min" name="short-term-rci-below" placeholder="以下で通知　0~100を入力">
+      <input type="number" id="rci-short-max" name="short-term-rci-above" placeholder="以上で通知　0~100を入力">
+	  <input type="number" id="rci-short-min" name="short-term-rci-below" placeholder="以下で通知　0~100を入力">
       <br>
       <label for="rci-short-period">　　 短期期間設定</label>
-      <input type="text" id="rci-short-period" name="short-term-rci-period" placeholder="数字を入力">
+      <input type="number" id="rci-short-period" name="short-term-rci-period" placeholder="数字を入力">
       <select id="rci-period1" name="rci-period1">
         <option value="日">日</option>
         <option value="週">週</option>
@@ -57,11 +57,11 @@
       </select>
       <br>
       <label for="rci-long-term">長期</label>
-      <input type="text" id="rci-long-max" name="long-term-rci-above" placeholder="以上で通知　0~100を入力">
-	  <input type="text" id="rci-long-min" name="long-term-rci-below" placeholder="以下で通知　0~100を入力">
+      <input type="number" id="rci-long-max" name="long-term-rci-above" placeholder="以上で通知　0~100を入力">
+	  <input type="number" id="rci-long-min" name="long-term-rci-below" placeholder="以下で通知　0~100を入力">
       <br>
       <label for="rci-short-period">　　 長期期間設定</label>
-      <input type="text" id="rci-longperiod" name="long-term-rci-period" placeholder="数字を入力">
+      <input type="number" id="rci-longperiod" name="long-term-rci-period" placeholder="数字を入力">
       <select id="rci-period2" name="rci-period2">
         <option value="日">日</option>
         <option value="週">週</option>
@@ -82,11 +82,11 @@
 
   <h2>MACD</h2>
   <label for="MACD-term">短期</label>
-      <input type="text" id="MACD-max" name="term-MACD-above" placeholder="以上で通知　0~100を入力">
-	  <input type="text" id="MACD-min" name="term-MACD-below" placeholder="以下で通知　0~100を入力">
+      <input type="number" id="MACD-max" name="term-MACD-above" placeholder="以上で通知　0~100を入力">
+	  <input type="number" id="MACD-min" name="term-MACD-below" placeholder="以下で通知　0~100を入力">
       <br>
       <label for="MACD-period">　　 短期期間設定</label>
-      <input type="text" id="MACD-period" name="term-MACD-period" placeholder="数字を入力">
+      <input type="number" id="MACD-period" name="term-MACD-period" placeholder="数字を入力">
       <select id="MACD-period1" name="MACD-period1">
         <option value="日">日</option>
         <option value="週">週</option>
@@ -94,11 +94,11 @@
       </select>
       <br>
       <label for="MACD-signal-term">長期</label>
-      <input type="text" id="MACD-signal-max" name="MACD-signal-above" placeholder="以上で通知　0~100を入力">
-	  <input type="text" id="MACD-signal-min" name="MACD-signal-below" placeholder="以下で通知　0~100を入力">
+      <input type="number" id="MACD-signal-max" name="MACD-signal-above" placeholder="以上で通知　0~100を入力">
+	  <input type="number" id="MACD-signal-min" name="MACD-signal-below" placeholder="以下で通知　0~100を入力">
       <br>
       <label for="rci-short-period">　　 長期期間設定</label>
-      <input type="text" id="MACD-signal-longperiod" name="MACD-signal-period" placeholder="数字を入力">
+      <input type="number" id="MACD-signal-longperiod" name="MACD-signal-period" placeholder="数字を入力">
       <select id="MACD-signal-period2" name="MACD-signal-period2">
         <option value="日">日</option>
         <option value="週">週</option>
@@ -140,16 +140,27 @@
             });
         }
 
-        function sendText(text) {
-            liff.sendMessages([{
-                'type': 'text',
-                'text': text
-            }]).then(function () {
-                liff.closeWindow();
-            }).catch(function (error) {
-                window.alert('Failed to send message ' + error);
-            });
-        }
+        <!--
+        function sendRequest(text) {
+        var name = document.getElementById('name').value;
+        var message = document.getElementById('message').value;
+        -->
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://api.line.me/v2/bot/message/push', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Authorization', 'Bearer Y8Eo7KM4TgxNm6nqviMtMuVe8Z7Zdms0lm0o77hgSkWVI4VQNj287Fd57sFRVK1CkBYpHskPK08wgO0mVYaJzGRX53wS7hDKaUjDMROPf+Hw5A7feH0q2aIIvXse0hyMTKUt6zIwgALBwPlSJKKinAdB04t89/1O/w1cDnyilFU=');
+
+        xhr.send(JSON.stringify({
+          to: '1660897623',
+          messages: [
+            {
+              type: 'text',
+              text: msgrsi + '\n\n' + msgrci + '\n\n' + msgmacd
+            }
+          ]
+        }));
+      }
 
         const params = (new URL(document.location)).searchParams;
         const key = params.get('key');
