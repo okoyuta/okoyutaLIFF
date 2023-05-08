@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>おこ株オシレーター</title>
+    <title>おこ株オシレーター設定</title>
     <style>
       body {
         margin: 0;
@@ -12,7 +12,7 @@
       input, textarea {
         font-size: 18px;
       }
-    </style>	  
+    </style>
   </head>
   <body>
     <form action="https://example.com/webhook" method="POST">
@@ -128,99 +128,48 @@
       </select>
       <br>
       <br>
-  <button type="submit">送信</button>
+  <button onclick="sendToLineBot()">入力フォームに移動</button>
+
+</form>
+<script>
+// 入力フォームからLINE botに送信する
+function sendToLineBot(name, email) {
+  var message = {
+    type: 'text',
+    text: '名前: ' + name + '\nメールアドレス: ' + email
+  };
+  var body = {
+    to: '1660931434-LZAgvmPJ',
+    messages: [message]
+  };
+  fetch('https://api.line.me/v2/bot/message/push', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + 'Y8Eo7KM4TgxNm6nqviMtMuVe8Z7Zdms0lm0o77hgSkWVI4VQNj287Fd57sFRVK1CkBYpHskPK08wgO0mVYaJzGRX53wS7hDKaUjDMROPf+Hw5A7feH0q2aIIvXse0hyMTKUt6zIwgALBwPlSJKKinAdB04t89/1O/w1cDnyilFU='
+    },
+    body: JSON.stringify(body)
+  });
+}
+</script>
+  <!-- 入力フォーム -->
+<form id="input-form">
+  <label for="name">名前:</label>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="email">メールアドレス:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit" value="送信">
 </form>
 
-  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script>
+document.getElementById('input-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  sendToLineBot(name, email);
+});
+</script>
 
-   <script>
-
-        $(document).ready(function () {
-            const liffId = "1660931434-LZAgvmPJ";
-            initializeLiff(liffId);
-        })
-
-        function initializeLiff(liffId) {
-            liff.init({
-                liffId: liffId
-            }).then(() => {
-                initializeApp();
-            }).catch((err) => {
-                console.log('LIFF Initialization failed ', err);
-            });
-        }
-
-        <!--
-        function sendRequest(text) {
-        var name = document.getElementById('name').value;
-        var message = document.getElementById('message').value;
-        -->
-
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://api.line.me/v2/bot/message/push', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('Authorization', 'Bearer Y8Eo7KM4TgxNm6nqviMtMuVe8Z7Zdms0lm0o77hgSkWVI4VQNj287Fd57sFRVK1CkBYpHskPK08wgO0mVYaJzGRX53wS7hDKaUjDMROPf+Hw5A7feH0q2aIIvXse0hyMTKUt6zIwgALBwPlSJKKinAdB04t89/1O/w1cDnyilFU=');
-
-        xhr.send(JSON.stringify({
-          to: '1660897623',
-          messages: [
-            {
-              type: 'text',
-              text: msgrsi + '\n\n' + msgrci + '\n\n' + msgmacd
-            }
-          ]
-        }));
-      }
-
-        const params = (new URL(document.location)).searchParams;
-        const key = params.get('key');
-
-     　　$(function () {
-            $('form').submit(function () {
-                const short-term-rsi-above    = $('input[name="short-term-rsi-above"]').val();
-                const short-term-rsi-below = $('input[name="short-term-rsi-below"]').val();
-                const short-term-rsi-period  = $('input[name="short-term-rsi-period"]').val();
-                const rsi-period1 = $('#name="rsi-period1"').val();
-                const long-term-rsi-above    = $('input[name="long-term-rsi-above"]').val();
-                const long-term-rsi-below = $('input[name="long-term-rsi-below"]').val();
-                const long-term-rsi-period  = $('input[name="long-term-rsi-period"]').val();
-                const rsi-period2 = $('#name="rsi-period2"').val();
-                const rsi-notification = $('#name="rsi-notification"').val();
-                const rsi-trigger = $('#name="rsi-trigger"').val();
-                const msgrsi = `${short-term-rsi-above}\n${short-term-rsi-below}\n${short-term-rsi-period}${rsi-period1}\n${long-term-rsi-above}\n${long-term-rsi-below}\n${long-term-rsi-period}${rsi-period2}\n${rsi-notification}\n${rsi-trigger}`;
-
-                const short-term-rci-above    = $('input[name="short-term-rci-above"]').val();
-                const short-term-rci-below = $('input[name="short-term-rci-below"]').val();
-                const short-term-rci-period  = $('input[name="short-term-rci-period"]').val();
-                const rci-period1 = $('#name="rci-period1"').val();
-                const long-term-rci-above    = $('input[name="long-term-rci-above"]').val();
-                const long-term-rci-below = $('input[name="long-term-rci-below"]').val();
-                const long-term-rci-period  = $('input[name="long-term-rci-period"]').val();
-                const rci-period2 = $('#name="rci-period2"').val();
-                const rci-notification = $('#name="rci-notification"').val();
-                const rci-trigger = $('#name="rci-trigger"').val();
-                const msgrci = `${short-term-rci-above}\n${short-term-rci-below}\n${short-term-rci-period}${rci-period1}\n${long-term-rci-above}\n${long-term-rci-below}\n${long-term-rci-period}${rci-period2}\n${rci-notification}\n${rci-trigger}`;
-
-                const term-MACD-above    = $('input[name="term-MACD-above"]').val();
-                const term-MACD-below = $('input[name="term-MACD-below"]').val();
-                const term-MACD-period  = $('input[name="term-MACD-period"]').val();
-                const MACD-period1 = $('#name="MACD-period1"').val();
-                const MACD-signal-above    = $('input[name="MACD-signal-above"]').val();
-                const MACD-signal-below = $('input[name="MACD-signal-below"]').val();
-                const MACD-signal-period  = $('input[name="MACD-signal-period"]').val();
-                const MACD-signal-period2 = $('#name="MACD-signal-period2"').val();
-                const MACD-signal-notification = $('#name="MACD-signal-notification"').val();
-                const MACD-signal-trigger = $('#name="MACD-signal-trigger"').val();
-                const msgmacd = `${term-MACD-above}\n${term-MACD-below}\n${term-MACD-period}${MACD-period1}\n${MACD-signal-above}\n${MACD-signal-below}\n${MACD-signal-period}${MACD-signal-period2}\n${MACD-signal-notification}\n${MACD-signal-trigger}`;
-
-                sendText(msgrsi);
-                sendText(msgrci);
-                sendText(msgmacd);
-                return false;
-            });
-        });
-
-    </script>
 
 </body>
 </html>
